@@ -1,0 +1,51 @@
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Style for the list items */
+.custom-li::before {
+  content: counter(item, decimal-leading-zero);
+  counter-increment: item;
+  margin-right: 5px;
+  color: green;
+  font-weight: 700;
+  /* Add spacing between the number and content */
+}
