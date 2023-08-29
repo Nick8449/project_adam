@@ -58,6 +58,13 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.71;
+
+  transition: background-color var(--transition-duration-time-function);
+}
+
+.scroll-to-application:hover,
+.scroll-to-application:focus {
+  background-color: var(--hover-focus-color);
 }
 
 .scroll-to-footer {
@@ -74,8 +81,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color var(--transition-duration-time-function);
 }
 
 .scroll-to-footer-icon {
-  stroke: var(--green);
+  fill: var(--green);
+  transition: fill var(--transition-duration-time-function);
+}
+
+.scroll-to-footer:hover,
+.scroll-to-footer:focus {
+  background-color: var(--green);
+}
+
+.scroll-to-footer:hover .scroll-to-footer-icon,
+.scroll-to-footer:focus .scroll-to-footer-icon {
+  fill: var(--white);
 }
