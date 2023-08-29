@@ -1,9 +1,71 @@
 <section class="application">
   <div class="container">
-    <h2 class="application--title">Leave an application</h2>
-    <p class="application--description">
+    <h2 class="application-title">Leave an <span>application</span></h2>
+    <p class="application-description">
       Please use the form below to contact us. Enter your name, email, and
       message and we'll get back to you shortly.
     </p>
+    <form class="application-form">
+      <label>
+        <input
+          class="application-input"
+          type="text"
+          placeholder="Name"
+          name="name"
+        />
+      </label>
+      <label>
+        <input
+          class="application-input"
+          type="email"
+          placeholder="Email"
+          name="email"
+        />
+      </label>
+      <label>
+        <input
+          class="application-input"
+          type="text"
+          placeholder="Phone"
+          name="phone"
+        />
+      </label>
+      <label>
+        <textarea
+          class="application-textarea"
+          name="application-comment"
+          placeholder="Comment"
+        ></textarea>
+      </label>
+
+      <!-- Checkboxes -->
+      <h3 class="application-teachers-title">Choose a teacher</h3>
+      <ul class="application-teachers-list">
+        <li class="application-teachers-item">
+          <label>
+            Maria
+            <input type="radio" name="teacher" value="Maria" />
+          </label>
+        </li>
+        <li class="application-teachers-item">
+          <label>
+            Artem
+            <input type="radio" name="teacher" value="Artem" />
+          </label>
+        </li>
+        <li class="application-teachers-item">
+          <label>
+            Ilona
+            <input type="radio" name="teacher" value="Ilona" />
+          </label>
+        </li>
+        <li class="application-teachers-item">
+          <label>
+            Volodymyr
+            <input type="radio" name="teacher" value="Volodymyr" />
+          </label>
+        </li>
+      </ul>
+    </form>
   </div>
 </section>
