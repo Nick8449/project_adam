@@ -1,26 +1,38 @@
 .hero {
-  max-width: 335px;
-  height: 709px;
-  border-radius: 16px;
-  background-color: linear-gradient(57deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-    url(../../images/hero/hero-mobile@1x.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
 }
 
 .hero-container {
   position: relative;
+  height: 709px;
   padding: 0 20px 72px 20px;
+  max-width: 335px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  background-image: linear-gradient(
+      57deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url('../../images/hero/hero-mobile@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex-shrink: 0;
 }
 
 .hero-header {
+  color: var(--white);
   font-size: 38px;
   font-style: normal;
   font-weight: 700;
@@ -58,6 +70,10 @@
   border-radius: 50%;
   background-color: var(--white);
   flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scroll-to-footer-icon {
