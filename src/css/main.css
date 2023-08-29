@@ -14,11 +14,10 @@
 
 @import url('./layout/header.css');
 @import url('./layout/hero.css');
-@import url('./layout/about_us.css');
+@import url('./layout/about-us.css');
 @import url('./layout/lessons.css');
 @import url('./layout/application_proposal.css');
 @import url('./layout/teachers.css');
 @import url('./layout/application.css');
 @import url('./layout/reviews.css');
 @import url('./layout/footer.css');
-@import url('./components/about-us.css');
