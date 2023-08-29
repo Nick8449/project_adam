@@ -18,7 +18,10 @@
 }
 
 .about-us-list {
+  counter-reset: item;
+  list-style-type: none;
   margin-bottom: 20px;
+  padding-left: 0;
 }
 
 .about-us-item {
@@ -33,6 +36,7 @@
 }
 
 .about-us-num {
+  display: block;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.14;
