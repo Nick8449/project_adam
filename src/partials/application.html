@@ -1,6 +1,8 @@
 <section class="application">
   <div class="container">
-    <h2 class="application-title">Leave an <span>application</span></h2>
+    <h2 class="section-headline">
+      Leave an <span class="header-underline">application</span>
+    </h2>
     <p class="application-description">
       Please use the form below to contact us. Enter your name, email, and
       message and we'll get back to you shortly.
@@ -11,7 +13,9 @@
           class="application-input"
           type="text"
           placeholder="Name"
-          name="name"
+          name="application-name"
+          pattern="[A-Za-z]{1,32}"
+          required
         />
       </label>
       <label>
@@ -19,15 +23,19 @@
           class="application-input"
           type="email"
           placeholder="Email"
-          name="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          name="application-email"
+          required
         />
       </label>
       <label>
         <input
           class="application-input"
-          type="text"
+          type="tel"
           placeholder="Phone"
-          name="phone"
+          name="application-phone"
+          pattern="[0-9]{5,13}"
+          required
         />
       </label>
       <label>
@@ -42,30 +50,56 @@
       <h3 class="application-teachers-title">Choose a teacher</h3>
       <ul class="application-teachers-list">
         <li class="application-teachers-item">
-          <label>
-            Maria
-            <input type="radio" name="teacher" value="Maria" />
-          </label>
+          <input
+            class="application-radio visually-hidden"
+            id="maria"
+            type="radio"
+            name="teacher"
+            value="Maria"
+          />
+          <label class="application-teachers-label" for="maria">Maria</label>
         </li>
         <li class="application-teachers-item">
-          <label>
-            Artem
-            <input type="radio" name="teacher" value="Artem" />
-          </label>
+          <input
+            class="application-radio visually-hidden"
+            id="artem"
+            type="radio"
+            name="teacher"
+            value="Artem"
+          />
+          <label class="application-teachers-label" for="artem">Artem</label>
         </li>
         <li class="application-teachers-item">
-          <label>
-            Ilona
-            <input type="radio" name="teacher" value="Ilona" />
-          </label>
+          <input
+            class="application-radio visually-hidden"
+            id="ilona"
+            type="radio"
+            name="teacher"
+            value="Ilona"
+          />
+          <label class="application-teachers-label" for="ilona">Ilona</label>
         </li>
         <li class="application-teachers-item">
-          <label>
-            Volodymyr
-            <input type="radio" name="teacher" value="Volodymyr" />
-          </label>
+          <input
+            class="application-radio visually-hidden"
+            id="volodymyr"
+            type="radio"
+            name="teacher"
+            value="Volodymyr"
+          />
+          <label class="application-teachers-label" for="volodymyr"
+            >Volodymyr</label
+          >
         </li>
       </ul>
+      <button class="application-btn" type="submit">Send</button>
     </form>
+    <p class="application-helper-text">
+      By clicking on “Send” button, you agree to our&nbsp;<a
+        href=""
+        class="application-helper-link"
+        >Privacy Policy</a
+      >, and allow Promodo to use this information for marketing purposes.
+    </p>
   </div>
 </section>
