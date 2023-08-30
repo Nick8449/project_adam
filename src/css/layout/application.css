@@ -1,5 +1,3 @@
-.application {
-}
 .application-remark-wrapper {
   display: none;
 }
@@ -134,11 +132,15 @@
   text-decoration: underline;
 }
 
+/* ! Before tablet */
+
 @media screen and (max-width: 767px) {
   .application-title-underline::after {
     display: none;
   }
 }
+
+/* ! Tablet */
 
 @media screen and (min-width: 768px) {
   .application-description {
@@ -179,6 +181,9 @@
     line-height: 1.56;
   }
 }
+
+/* ! Desktop */
+
 @media screen and (min-width: 1280px) {
   .application-data {
     display: flex;
@@ -191,9 +196,6 @@
     background-color: var(--green);
     border-radius: 30px;
     overflow: hidden;
-  }
-  .application-remark-img {
-    /* width: 100%; */
   }
   .application-remark-meta {
     padding: 20px;
