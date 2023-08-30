@@ -1,7 +1,6 @@
 .proposal {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 80px;
 }
 
 .proposal-container {
@@ -9,9 +8,12 @@
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px 64px 20px;
-
   border-radius: 16px;
-  background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
+  background: linear-gradient(
+    80deg,
+    var(--green) 0%,
+    var(--header-second-style-color) 100%
+  );
   overflow: hidden;
 }
 
@@ -46,7 +48,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 16px;
   transform: rotate(11deg);
   background: var(--white);
   opacity: 50%;
@@ -60,7 +62,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 16px;
   transform: rotate(-9deg);
   background: var(--light-green);
   z-index: -1;
@@ -69,7 +71,7 @@
 .proposal-list-title {
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
 
@@ -85,7 +87,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.43;
-  letter-spacing: -0.28px;
+  letter-spacing: -0.02em;
   display: flex;
   column-gap: 8px;
   align-items: center;
@@ -109,14 +111,9 @@
   background-size: 12px;
 }
 
-.tast {
-  stroke: black;
-}
-
 .proposal-button {
   border-radius: 12px;
   background: var(--green);
-  display: block;
   color: var(--white);
   font-size: 14px;
   font-weight: 700;
@@ -126,4 +123,81 @@
   padding-bottom: 14px;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .proposal {
+    min-width: 704px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .proposal-container {
+    min-width: 704px;
+    padding: 64px 18px 92px 18px;
+    border-radius: 30px;
+  }
+
+  .proposal-title {
+    font-size: 60px;
+    line-height: 1.17;
+  }
+
+  .proposal-list-card {
+    border-radius: 30px;
+    padding: 64px 32px;
+    background-image: url(../../images/application_proposal/stack-of-books.png);
+    background-position: 503px 173px;
+    background-size: 214px 263px;
+    background-repeat: no-repeat;
+  }
+
+  .proposal-list-card::before {
+    border-radius: 30px;
+    transform: rotate(10.655deg) translateY(6px);
+  }
+
+  .proposal-list-card::after {
+    border-radius: 30px;
+    transform: rotate(-9.864deg) translateY(2px);
+  }
+
+  .proposal-list-title {
+    font-size: 40px;
+    letter-spacing: -0.02em;
+  }
+
+  .proposal-list {
+    margin-bottom: 32px;
+  }
+
+  .proposal-list-item {
+    width: 448px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    column-gap: 16px;
+  }
+
+  .proposal-list-item::before {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    background-size: 20px;
+  }
+
+  .proposal-button {
+    display: inline-flex;
+    padding: 16px 64px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx),
+  screen and (min-width: 768px) and (min-device-pixel-ratio: 2) {
+  .proposal-list-card {
+    background-image: url(../../images/application_proposal/stack-of-books@2x.png);
+  }
 }
