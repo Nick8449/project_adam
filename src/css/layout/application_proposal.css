@@ -141,6 +141,7 @@
   .proposal-title {
     font-size: 60px;
     line-height: 1.17;
+    margin-bottom: 84px;
   }
 
   .proposal-list-card {
@@ -165,6 +166,7 @@
   .proposal-list-title {
     font-size: 40px;
     letter-spacing: -0.02em;
+    margin-bottom: 32px;
   }
 
   .proposal-list {
@@ -199,5 +201,55 @@
   screen and (min-width: 768px) and (min-device-pixel-ratio: 2) {
   .proposal-list-card {
     background-image: url(../../images/application_proposal/stack-of-books@2x.png);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .proposal {
+    min-width: 1152px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .proposal-container {
+    min-width: 1152px;
+    padding: 64px 64px 141px 64px;
+  }
+
+  .proposal-title {
+    max-width: 776px;
+    margin-bottom: 133px;
+  }
+
+  .proposal-list-card {
+    padding-left: 64px;
+    padding-right: 64px;
+    background-position: 810px 128px;
+  }
+
+  .proposal-list-card::before {
+    border-radius: 30px;
+    transform: rotate(11deg) translate(5px, 46px);
+    width: 98.7%;
+    height: 85%;
+  }
+
+  .proposal-list-card::after {
+    border-radius: 30px;
+    transform: rotate(-8deg) translate(-24px, 10px);
+    width: 102.5%;
+    height: 98.3%;
+  }
+
+  .proposal-list-title {
+    margin-bottom: 40px;
+  }
+
+  .proposal-list {
+    margin-bottom: 39px;
+  }
+
+  .proposal-list-item {
+    width: 654px;
   }
 }
