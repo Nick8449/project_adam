@@ -1,0 +1,136 @@
+.lessons .section-description-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.lessons .section-description {
+  max-width: 665px;
+}
+
+.lessons .lessons-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 335px;
+  gap: 20px;
+}
+
+.lessons .lessons-list-item {
+  padding: 40px 20px;
+  border: 1px solid var(--green);
+  border-radius: 16px;
+  color: var(--black);
+  max-width: 335px;
+}
+
+.lessons .lessons-list-item.even {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.lessons .lessons-item-title {
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.lessons .lessons-item-price {
+  font-family: Manrope;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.lessons .lessons-item-details {
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 50%;
+}
+
+.lessons .lessons-list-item.even .lessons-item-details {
+  opacity: 70%;
+}
+
+.lessons .lessons-item-btn {
+  width: 100%;
+  max-width: 375px;
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: var(--green);
+  border: none;
+
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.lessons .lessons-item-btn:hover {
+  background: #38ae5f;
+}
+
+.lessons .lessons-list-item.even .lessons-item-btn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (min-width: 768px) {
+  .lessons .lessons-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 704px;
+    gap: 32px;
+  }
+
+  .lessons .lessons-list-item {
+    padding: 32px 16px;
+    max-width: 336px;
+  }
+
+  .lessons .lessons-item-price {
+    line-height: 44px;
+    margin-bottom: 32px;
+  }
+
+  .lessons .lessons-item-details {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .lessons .lessons-item-btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .lessons .lessons-list {
+    /* 1280px - (128px * 2px) */
+    max-width: 1024px;
+  }
+
+  .lessons .lessons-list-item {
+    padding: 32px;
+    max-width: 320px;
+  }
+
+  .lessons .lessons-item-price {
+    margin-bottom: 16px;
+  }
+}
