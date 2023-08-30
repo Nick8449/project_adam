@@ -1,0 +1,129 @@
+.proposal {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 80px;
+}
+
+.proposal-container {
+  max-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px 64px 20px;
+
+  border-radius: 16px;
+  background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
+  overflow: hidden;
+}
+
+.proposal-title {
+  color: var(--white);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 65px;
+}
+
+.proposal-title-accent {
+  color: var(--header-second-style-color);
+}
+
+.proposal-list-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.proposal-list-card {
+  border-radius: 16px;
+  background: var(--white);
+
+  padding: 40px 20px;
+}
+
+.proposal-list-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transform: rotate(11deg);
+  background: var(--white);
+  opacity: 50%;
+  z-index: -1;
+}
+
+.proposal-list-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transform: rotate(-9deg);
+  background: var(--light-green);
+  z-index: -1;
+}
+
+.proposal-list-title {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  margin-bottom: 20px;
+}
+
+.proposal-list {
+  margin-bottom: 20px;
+}
+
+.proposal-list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.proposal-list-item {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.28px;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.proposal-list-item::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  background-image: url(../../images/icons/check.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 12px;
+}
+
+.tast {
+  stroke: black;
+}
+
+.proposal-button {
+  border-radius: 12px;
+  background: var(--green);
+  display: block;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.71;
+  display: flex;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  justify-content: center;
+  align-items: center;
+}
