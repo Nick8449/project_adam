@@ -30,12 +30,6 @@
   color: var(--black);
 }
 
-@media screen and (max-width: 767px) {
-  .header-underline::after {
-    height: 12px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .teachers-list {
     display: flex;
