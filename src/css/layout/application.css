@@ -109,7 +109,7 @@
   border-radius: 12px;
   border: none;
   background-color: var(--green);
-  color: #fff;
+  color: var(--white);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.71;
