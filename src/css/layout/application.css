@@ -9,6 +9,7 @@
   line-height: 1.71;
   margin-bottom: 20px;
 }
+
 .application-input {
   width: 100%;
   height: 50px;
@@ -126,4 +127,9 @@
 }
 .application-helper-link {
   text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .application-title-underline::after {
+    display: none;
+  }
 }
