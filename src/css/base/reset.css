@@ -34,6 +34,16 @@ img {
   height: auto;
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 .custom-ol {
   counter-reset: item;
   list-style-type: none;
@@ -49,3 +59,4 @@ img {
   font-weight: 700;
   /* Add spacing between the number and content */
 }
+
