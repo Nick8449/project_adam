@@ -11,6 +11,7 @@
 .application-input-label {
   display: block;
   margin-bottom: 18px;
+  position: relative;
 }
 .application-input {
   width: 100%;
@@ -24,8 +25,25 @@
   outline: none;
   transition: border-color var(--transition-duration-time-function);
 }
+.application-input-warning-icon {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  fill: var(--invalid);
+  pointer-events: none;
+  transform: translateY(-50%) scale(0);
+  transition: transform var(--transition-duration-time-function);
+}
 .application-input:focus {
   border-color: var(--green);
+}
+
+.application-input:invalid:not(:placeholder-shown):required {
+  border-color: var(--invalid);
+}
+.application-input:invalid:not(:placeholder-shown):required
+  + .application-input-warning-icon {
+  transform: scale(1) translateY(-50%);
 }
 .application-textarea-label {
   margin-bottom: 20px;
@@ -213,6 +231,6 @@
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     font-size: 16px;
-    line-height: 1.5; /* 150% */
+    line-height: 1.5;
   }
 }
