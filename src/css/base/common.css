@@ -1,6 +1,6 @@
 body {
   font-family: var(--main-font);
-
+  position: relative;
   background-color: var(--white);
   color: var(--black);
 }
