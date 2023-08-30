@@ -36,11 +36,11 @@
 }
 .side-menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 50%;
-    height: 812px;
+    height: 100vh;
     padding: 20px;
     background-color: var(--green);
     z-index: 1000;
@@ -143,7 +143,6 @@
     }
         
     .side-menu {
-        height: 1000px;
         padding: 20px 32px 32px 32px;
         
     }
