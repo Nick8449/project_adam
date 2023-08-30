@@ -23,7 +23,7 @@ body {
 
 .header-underline::after {
   position: absolute;
-  left: 50%;
+  left: 52%;
   bottom: 0;
   display: block;
   width: 104%;
