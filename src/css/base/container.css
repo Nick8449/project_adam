@@ -11,6 +11,10 @@
   padding-bottom: 40px;
 }
 
+.last-section {
+  padding-bottom: 80px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -21,6 +25,10 @@
   .section {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .last-section {
+    padding-bottom: 100px;
   }
 }
 
@@ -34,5 +42,9 @@
   .section {
     padding-top: 75px;
     padding-bottom: 75px;
+  }
+
+  .last-section {
+    padding-bottom: 150px;
   }
 }
