@@ -1,6 +1,35 @@
 body {
   font-family: var(--main-font);
-  position: relative;
+  font-size: 16px;
   background-color: var(--white);
   color: var(--black);
+  position: relative;
+}
+
+.section-headline {
+  font-size: 32px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+
+.header-underline {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.header-underline::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 102%;
+  height: 20px;
+  background-color: var(--header-second-style-color);
+  content: '';
+  border-radius: 8px;
+  z-index: -1;
 }

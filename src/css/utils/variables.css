@@ -1,9 +1,16 @@
 :root {
   --main-font: 'Manrope', sans-serif;
 
+  /* main colors */
   --black: #121417;
   --green: #4dc274;
   --light-green: #d4fde1;
   --gray: #f3f5f6;
   --white: #ffffff;
+
+  /* additional colors */
+  --header-second-style-color: #bee8cc;
+  --hover-focus-color: #38ae5f;
+
+  --transition-duration-time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
