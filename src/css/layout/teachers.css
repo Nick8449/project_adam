@@ -1,7 +1,3 @@
-.teachers-section {
-  padding-bottom: 80px;
-}
-
 .text-main-teachers {
   text-align: center;
   font-size: 14px;
@@ -41,10 +37,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .teachers-section {
-    padding-bottom: 100px;
-  }
-
   .teachers-list {
     display: flex;
     flex-wrap: wrap;
@@ -71,10 +63,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .teachers-section {
-    padding-bottom: 150px;
-  }
-
   .teachers-description {
     max-width: 709px;
     margin-left: auto;
