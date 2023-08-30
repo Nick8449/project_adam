@@ -8,6 +8,7 @@
   --gray: #f3f5f6;
   --white: #ffffff;
   --text-color-grey: rgba(18, 20, 23, 0.5);
+  --invalid: #ee323d;
 
   /* additional colors */
   --header-second-style-color: #bee8cc;
