@@ -6,11 +6,21 @@
   margin-right: auto;
 }
 
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -19,5 +29,10 @@
     max-width: 1280px;
     padding-left: 128px;
     padding-right: 128px;
+  }
+
+  .section {
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 }
