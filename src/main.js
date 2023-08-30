@@ -25,6 +25,8 @@ backdrop.addEventListener('click', (event) => {
 
     if(event.target === event.currentTarget){
         backdrop.classList.add('is-hidden');
+        sideMenu.classList.add('is-hidden');
+        sideMenu.classList.remove('visible')
     }
 
 });
@@ -50,6 +52,7 @@ function handleScreenWidthChange() {
     burgerButton.classList.remove('is-hidden');
     closeButton.classList.remove('is-hidden');
     backdrop.classList.add('is-hidden');
+    sideMenu.classList.add('is-hidden');
   }
 
   if(screenWidth >= 1280 ){
