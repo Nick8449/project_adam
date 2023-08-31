@@ -10,7 +10,6 @@
 .lessons .lessons-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   max-width: 335px;
   gap: 20px;
@@ -30,7 +29,6 @@
 }
 
 .lessons .lessons-item-title {
-  font-family: Manrope;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -40,7 +38,6 @@
 }
 
 .lessons .lessons-item-price {
-  font-family: Manrope;
   font-size: 32px;
   font-weight: 700;
   line-height: 36px;
@@ -50,7 +47,6 @@
 }
 
 .lessons .lessons-item-details {
-  font-family: Manrope;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -74,21 +70,29 @@
   background-color: var(--green);
   border: none;
 
-  font-family: Manrope;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
+
+  transition: background-color var(--transition-duration-time-function);
+  transition: color var(--transition-duration-time-function);
 }
 
 .lessons .lessons-item-btn:hover {
-  background: #38ae5f;
+  background-color: #38ae5f;
 }
 
 .lessons .lessons-list-item.even .lessons-item-btn {
   border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.lessons .lessons-list-item.even .lessons-item-btn:hover {
+  background-color: var(--white);
+  color: var(--green);
 }
 
 @media screen and (min-width: 768px) {
@@ -123,6 +127,7 @@
   .lessons .lessons-list {
     /* 1280px - (128px * 2px) */
     max-width: 1024px;
+    justify-content: center;
   }
 
   .lessons .lessons-list-item {

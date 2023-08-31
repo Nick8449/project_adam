@@ -92,3 +92,46 @@ window.addEventListener('resize', handleScreenWidthChange);
 
 
 // ****************************************************************************//
+
+
+
+
+//-------------------------------- Privycy Policy ------------------------------//
+
+const infoBtn = document.getElementById('info-open-btn');
+const infoCloseBtn = document.getElementById('info-close-btn');
+const infoBackdrop = document.getElementById('info-backdrop');
+
+infoBtn.addEventListener('click', () => {
+    infoBackdrop.classList.remove('is-hidden');
+});
+
+infoCloseBtn.addEventListener('click', () => {
+    closeInfoBackdrop();
+});
+
+function closeInfoBackdrop() {
+  infoBackdrop.classList.add('is-hidden');
+}
+
+// ****************************************************************************//
+
+//-------------------------------- Terms of Service ------------------------------//
+
+const termsBtn = document.getElementById('terms-open-btn');
+const termsCloseBtn = document.getElementById('terms-close-btn');
+const termsBackdrop = document.getElementById('terms-backdrop');
+
+termsBtn.addEventListener('click', () => {
+    termsBackdrop.classList.remove('is-hidden');
+});
+
+termsCloseBtn.addEventListener('click', () => {
+    closetTermsBackdrop();
+});
+
+function closetTermsBackdrop() {
+  termsBackdrop.classList.add('is-hidden');
+}
+
+// ****************************************************************************//
