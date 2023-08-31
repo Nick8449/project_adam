@@ -64,6 +64,7 @@
 .footer-logo {
     display: flex;
     font-family: var(--main-font);
+    font-style: normal;
     font-size: 20px;
     line-height: 1.36;
     letter-spacing: 0em;
