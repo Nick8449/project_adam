@@ -208,7 +208,7 @@
     .backdrop{
         position: static;
         background-color: transparent;
-        width: 70%;
+        width: 100%;
     }
     
     .side-menu {
@@ -243,6 +243,8 @@
         align-items: center;
         flex-direction: row;
         margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
     }
     
     .site-nav__list > li:not(:last-child) {
