@@ -147,7 +147,12 @@
   letter-spacing: -0.02em;
 }
 .application-helper-link {
+  display: inline;
+  border: none;
+  padding: 0;
+  background-color: transparent;
   text-decoration: underline;
+  color: inherit;
 }
 
 /* ! Before tablet */
