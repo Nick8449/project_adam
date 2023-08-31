@@ -141,13 +141,18 @@
   background-color: var(--hover-focus-color);
 }
 .application-helper-text {
-  color: rgba(18, 20, 23, 0.5);
+  color: var(--text-color-grey);
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: -0.02em;
 }
 .application-helper-link {
+  display: inline;
+  border: none;
+  padding: 0;
+  background-color: transparent;
   text-decoration: underline;
+  color: inherit;
 }
 
 /* ! Before tablet */
@@ -166,7 +171,7 @@
     margin-left: auto;
     max-width: 586px;
     margin-bottom: 64px;
-    color: rgba(18, 20, 23, 0.5);
+    color: var(--text-color-grey);
     font-size: 18px;
     line-height: 1.67;
   }
