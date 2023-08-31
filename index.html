@@ -21,8 +21,8 @@
     />
     
     <title>English Excellence</title>
-    <script type="module" crossorigin src="/project_cody_builders/assets/index-869f9f4c.js"></script>
-    <link rel="stylesheet" href="/project_cody_builders/assets/index-db6f76af.css">
+    <script type="module" crossorigin src="/project_cody_builders/assets/index-a19a60c5.js"></script>
+    <link rel="stylesheet" href="/project_cody_builders/assets/index-077085d5.css">
   </head>
   <body>
     <header>
@@ -344,12 +344,16 @@
             type="text"
             placeholder="Name"
             name="application-name"
-            pattern="[A-Za-z]{1,32}"
+            pattern="^[a-zA-Z]+( [a-zA-Z]+)?$"
             required
           />
           <svg class="application-input-warning-icon" width="24" height="24">
             <use href="/project_cody_builders/assets/icons-ad19fbc8.svg#icon-warning"></use>
           </svg>
+          <span class="application-input-warning-tooltip"
+            >For example: Jon Snow or Jon
+            <span class="application-input-warning-romb"></span>
+          </span>
         </label>
         <label class="application-input-label">
           <input
@@ -363,6 +367,10 @@
           <svg class="application-input-warning-icon" width="24" height="24">
             <use href="/project_cody_builders/assets/icons-ad19fbc8.svg#icon-warning"></use>
           </svg>
+          <span class="application-input-warning-tooltip"
+            >For example: example@gmail.com
+            <span class="application-input-warning-romb"></span>
+          </span>
         </label>
         <label class="application-input-label">
           <input
@@ -376,6 +384,10 @@
           <svg class="application-input-warning-icon" width="24" height="24">
             <use href="/project_cody_builders/assets/icons-ad19fbc8.svg#icon-warning"></use>
           </svg>
+          <span class="application-input-warning-tooltip"
+            >For example: +123456789012 or 12345
+            <span class="application-input-warning-romb"></span>
+          </span>
         </label>
         <label class="application-textarea-label">
           <textarea
