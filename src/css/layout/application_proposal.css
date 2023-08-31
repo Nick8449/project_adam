@@ -113,7 +113,7 @@
 
 .proposal-button {
   border-radius: 12px;
-  background: var(--green);
+  background-color: var(--green);
   color: var(--white);
   font-size: 14px;
   font-weight: 700;
@@ -123,6 +123,13 @@
   padding-bottom: 14px;
   justify-content: center;
   align-items: center;
+
+  transition: background-color var(--transition-duration-time-function);
+}
+
+.proposal-button:hover,
+.proposal-button:focus {
+  background-color: var(--hover-focus-color);
 }
 
 @media screen and (min-width: 768px) {
