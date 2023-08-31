@@ -108,6 +108,10 @@
     stroke: var(--green);
 }
 
+.burger-button:not(:focus) .burger-button {
+    stroke: var(--black); 
+}
+
 .site-nav__list {
     display: flex; 
     flex-direction: column; 
@@ -271,9 +275,14 @@
         color: var(--black);
     }
     
-    .header_socials__link:hover .header_socials-icon,
-    .header_socials__link:focus .header_socials-icon
+    .header_socials__link:hover .header_socials-icon
     {
         fill: var(--green);
     }
+
+    .header_socials__link:focus .header_socials-icon
+    {
+        fill: var(--black);
+    }
+
 }
