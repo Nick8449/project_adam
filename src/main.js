@@ -98,11 +98,16 @@ window.addEventListener('resize', handleScreenWidthChange);
 
 //-------------------------------- Privycy Policy ------------------------------//
 
-const infoBtn = document.querySelectorAll('.info-open-btn-id');
-const infoCloseBtn = document.querySelectorAll('.info-close-btn-id');
-const infoBackdrop = document.querySelectorAll('.info-backdrop-id');
+const infoBtn = document.querySelector('.info-open-btn-id');
+const applicationBtn = document.querySelector('.application-open-btn-id');
+const infoCloseBtn = document.querySelector('.info-close-btn-id');
+const infoBackdrop = document.querySelector('.info-backdrop-id');
 
 infoBtn.addEventListener('click', () => {
+    infoBackdrop.classList.remove('is-hidden');
+});
+
+applicationBtn.addEventListener('click', () => {
     infoBackdrop.classList.remove('is-hidden');
 });
 
