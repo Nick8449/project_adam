@@ -98,11 +98,16 @@ window.addEventListener('resize', handleScreenWidthChange);
 
 //-------------------------------- Privycy Policy ------------------------------//
 
-const infoBtn = document.getElementById('info-open-btn');
-const infoCloseBtn = document.getElementById('info-close-btn');
-const infoBackdrop = document.getElementById('info-backdrop');
+const infoBtn = document.querySelector('.info-open-btn-id');
+const applicationBtn = document.querySelector('.application-open-btn-id');
+const infoCloseBtn = document.querySelector('.info-close-btn-id');
+const infoBackdrop = document.querySelector('.info-backdrop-id');
 
 infoBtn.addEventListener('click', () => {
+    infoBackdrop.classList.remove('is-hidden');
+});
+
+applicationBtn.addEventListener('click', () => {
     infoBackdrop.classList.remove('is-hidden');
 });
 
@@ -118,9 +123,9 @@ function closeInfoBackdrop() {
 
 //-------------------------------- Terms of Service ------------------------------//
 
-const termsBtn = document.getElementById('terms-open-btn');
-const termsCloseBtn = document.getElementById('terms-close-btn');
-const termsBackdrop = document.getElementById('terms-backdrop');
+const termsBtn = document.querySelector('.terms-open-btn');
+const termsCloseBtn = document.querySelector('.terms-close-btn');
+const termsBackdrop = document.querySelector('.terms-backdrop');
 
 termsBtn.addEventListener('click', () => {
     termsBackdrop.classList.remove('is-hidden');

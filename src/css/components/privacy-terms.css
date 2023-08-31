@@ -48,7 +48,6 @@
 @media screen and (min-width: 768px) {
     .info-modal {
         width: 550px;
-        height: 800px;
         padding: 72px 15px 24px 15px;
     }
 }
@@ -56,6 +55,7 @@
 @media screen and (min-width: 1280px) {
     .info-modal {
         width: 750px;
+        height: 800px;
         padding: 72px 20px 30px 20px;
     }
 }
