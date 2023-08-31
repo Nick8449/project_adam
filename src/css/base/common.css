@@ -7,7 +7,6 @@ body {
   background-color: var(--white);
   color: var(--black);
   position: relative;
-  min-width: 375px;
 }
 
 .section-headline {
