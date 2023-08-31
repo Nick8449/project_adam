@@ -26,7 +26,6 @@
   box-sizing: content-box;
   border-radius: 50%;
   margin-right: 8px;
-  /* flex-shrink: 0; */
 }
 
 .section-reviews-student-info {
@@ -96,10 +95,6 @@
     background-color: var(--green);
     margin-left: 16px;
     margin-right: 16px;
-  }
-
-  .section-reviews-photo {
-    padding-left: 16px;
   }
 
   .section-reviews-student-review {
