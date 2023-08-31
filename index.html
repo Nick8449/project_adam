@@ -19,8 +19,8 @@
     />
     
     <title>English Excellence</title>
-    <script type="module" crossorigin src="/project_cody_builders/assets/index-dee371e5.js"></script>
-    <link rel="stylesheet" href="/project_cody_builders/assets/index-de89341e.css">
+    <script type="module" crossorigin src="/project_cody_builders/assets/index-854c9738.js"></script>
+    <link rel="stylesheet" href="/project_cody_builders/assets/index-2989735d.css">
   </head>
   <body>
     <header>
@@ -368,7 +368,7 @@
             type="tel"
             placeholder="Phone"
             name="application-phone"
-            pattern="[0-9]{5,13}"
+            pattern="^(\+?\d[0-9]{4,11})"
             required
           />
           <svg class="application-input-warning-icon" width="24" height="24">
@@ -432,10 +432,12 @@
         </ul>
         <button class="application-btn" type="submit">Send</button>
         <p class="application-helper-text">
-          By clicking on “Send” button, you agree to our&nbsp;<a
-            href=""
+          By clicking on “Send” button, you agree to our&nbsp;<button
+            type="button"
+            id="info-open-btn"
             class="application-helper-link"
-            >Privacy Policy</a
+          >
+            Privacy Policy</button
           >,
           <br />
           and allow Promodo to use this information for marketing purposes.
