@@ -45,6 +45,40 @@
   + .application-input-warning-icon {
   transform: scale(1) translateY(-50%);
 }
+
+.application-input-warning-tooltip {
+  position: absolute;
+  right: 0;
+  bottom: 52px;
+  transform: scale(0);
+  display: block;
+  pointer-events: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--black);
+  background-color: var(--gray);
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  transition: transform var(--transition-duration-time-function);
+}
+.application-input-warning-romb {
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  transform: rotate(45deg);
+  width: 14px;
+  height: 14px;
+  right: 22px;
+  background-color: var(--gray);
+  border-right: 1px solid rgba(18, 20, 23, 0.1);
+  border-bottom: 1px solid rgba(18, 20, 23, 0.1);
+}
+.application-input:invalid:not(:placeholder-shown):required
+  ~ .application-input-warning-tooltip {
+  transform: scale(1);
+}
+
 .application-textarea-label {
   margin-bottom: 20px;
   display: block;
@@ -184,6 +218,9 @@
     height: 56px;
     font-size: 16px;
     line-height: 1.5;
+  }
+  .application-input-warning-tooltip {
+    bottom: 58px;
   }
   .application-textarea-label {
     margin-bottom: 32px;
