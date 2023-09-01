@@ -137,6 +137,7 @@
     margin-bottom: 40px;
     width: 79px;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -270,9 +271,10 @@
 }
 
 @media screen and (min-width: 768px) {
-    .footer-information {
-        margin-top: 16px;
+    .footer-information { 
         display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
     }
 }
 
@@ -284,29 +286,76 @@
 
 .footer-information-rights {
     display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
     margin-bottom: 14px;
 }
 
 @media screen and (min-width: 768px) {
     .footer-information-rights {
+        font-size: 14px;
         margin-bottom: 0;
     }
-}
-
-.footer-information-rights-btn {
-    padding: 0;
-    outline: 0;
-    outline-offset: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 .footer-information-rules {
     display: flex;
     gap: 18px;
+}
+
+.footer-information-rights-policy {
+    padding: 0;
+    outline: 0;
+    outline-offset: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-information-rights-policy {
+        font-size: 14px;
+    }
+}
+
+.footer-information-rights-terms {
+    padding: 0;
+    outline: 0;
+    outline-offset: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-information-rights-terms {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -319,4 +368,4 @@
     .footer-information-rules {
         margin-left: 538px;
     }
-}
+} 
