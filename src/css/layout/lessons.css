@@ -78,8 +78,8 @@
   text-align: left;
   color: #ffffff;
 
-  transition: background-color var(--transition-duration-time-function);
-  transition: color var(--transition-duration-time-function);
+  transition: color var(--transition-duration-time-function),
+    background-color var(--transition-duration-time-function);
 }
 
 .lessons .lessons-item-btn:hover {
