@@ -148,6 +148,7 @@
   .proposal-title {
     font-size: 60px;
     line-height: 1.17;
+    padding-left: 14px;
     margin-bottom: 84px;
   }
 
@@ -225,6 +226,7 @@
 
   .proposal-title {
     max-width: 776px;
+    padding-left: 0;
     margin-bottom: 133px;
   }
 

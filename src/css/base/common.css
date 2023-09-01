@@ -20,7 +20,7 @@ body {
 
 .section-description {
   margin-bottom: 40px;
-  color: rgba(18, 20, 23, 0.5);
+  color: var(--text-color-grey);
   text-align: center;
   font-size: 14px;
   line-height: 1.71;
@@ -55,5 +55,11 @@ body {
 
   .header-underline::after {
     height: 20px;
+  }
+
+  .section-description {
+    font-size: 18px;
+    line-height: 1.67;
+    margin-bottom: 64px;
   }
 }
