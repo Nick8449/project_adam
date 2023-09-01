@@ -11,12 +11,10 @@ const sideMenu = document.getElementById('side-menu');
 burgerButton.addEventListener('click', () => {
     backdrop.classList.remove('is-hidden');
     sideMenu.classList.remove('is-hidden');
-    sideMenu.classList.add('visible');
 });
 
 closeButton.addEventListener('click', () => {
     backdrop.classList.add('is-hidden');
-    sideMenu.classList.remove('visible');
     sideMenu.classList.add('is-hidden');
 
 });
@@ -26,7 +24,6 @@ backdrop.addEventListener('click', (event) => {
     if(event.target === event.currentTarget){
         backdrop.classList.add('is-hidden');
         sideMenu.classList.add('is-hidden');
-        sideMenu.classList.remove('visible')
     }
 
 });
@@ -56,7 +53,6 @@ function handleScreenWidthChange() {
   }
 
   if(screenWidth >= 1280 ){
-    navList.classList.remove('visible');
     burgerButton.classList.add('is-hidden');
     closeButton.classList.add('is-hidden');
     sideMenu.classList.remove('is-hidden');
@@ -83,7 +79,6 @@ function handleScreenWidthChange() {
   function removeIsHidden() {
     backdrop.classList.remove('is-hidden');
   }
-
 }
 
 handleScreenWidthChange();
