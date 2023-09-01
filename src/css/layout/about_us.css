@@ -1,3 +1,8 @@
+.about-us .section-description {
+  max-width: 658px;
+  margin-inline: auto;
+}
+
 .about-us-content {
   display: flex;
   flex-direction: column;
