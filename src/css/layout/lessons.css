@@ -78,11 +78,12 @@
   text-align: left;
   color: #ffffff;
 
-  transition: background-color var(--transition-duration-time-function);
-  transition: color var(--transition-duration-time-function);
+  transition: color var(--transition-duration-time-function),
+    background-color var(--transition-duration-time-function);
 }
 
-.lessons .lessons-item-btn:hover {
+.lessons .lessons-item-btn:hover,
+.lessons .lessons-item-btn:focus {
   background-color: #38ae5f;
 }
 
@@ -90,7 +91,8 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.lessons .lessons-list-item.even .lessons-item-btn:hover {
+.lessons .lessons-list-item.even .lessons-item-btn:hover,
+.lessons .lessons-list-item.even .lessons-item-btn:focus {
   background-color: var(--white);
   color: var(--green);
 }
