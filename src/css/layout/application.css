@@ -1,11 +1,7 @@
 .application-remark-wrapper {
   display: none;
 }
-.application-description {
-  color: rgba(18, 20, 23, 0.8);
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.71;
+.application .section-description {
   margin-bottom: 20px;
 }
 .application-input-label {
@@ -200,14 +196,11 @@
 /* ! Tablet */
 
 @media screen and (min-width: 768px) {
-  .application-description {
+  .application .section-description {
     margin-right: auto;
     margin-left: auto;
     max-width: 586px;
     margin-bottom: 64px;
-    color: var(--text-color-grey);
-    font-size: 18px;
-    line-height: 1.67;
   }
   .application-form {
     width: 500px;
@@ -240,6 +233,11 @@
     font-size: 18px;
     line-height: 1.56;
   }
+
+  .application-helper-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 /* ! Desktop */
@@ -258,7 +256,7 @@
     overflow: hidden;
   }
   .application-remark-meta {
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
   }
   .application-remark-value {
     color: var(--white);
