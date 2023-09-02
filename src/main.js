@@ -89,8 +89,6 @@ window.addEventListener('resize', handleScreenWidthChange);
 // ****************************************************************************//
 
 
-
-
 //-------------------------------- Privycy Policy ------------------------------//
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -140,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ****************************************************************************//
 
+
 //-------------------------------- Terms of Service ------------------------------//
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -187,3 +186,49 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ****************************************************************************//
+
+
+//-------------------------------- Loader ------------------------------//
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mask = document.querySelector('.mask');
+  const loader = document.querySelector('.loader');
+  const errorPage = document.querySelector('.page-error-container');
+
+  if (navigator.onLine) {
+    mask.style.display = 'none'; 
+    errorPage.style.display = 'none'; 
+  } else {
+    mask.style.display = 'none'; 
+    errorPage.style.display = 'block'; 
+    errorPage.style.position = 'fixed'; 
+    errorPage.style.zIndex = '9999999'; 
+    errorPage.style.top = '50%'; 
+    errorPage.style.left = '50%'; 
+    errorPage.style.transform = 'translate(-50%, -50%)'; 
+  }
+
+  window.addEventListener('online', () => {
+    mask.style.display = 'none'; 
+    errorPage.style.display = 'none'; 
+  });
+
+  window.addEventListener('offline', () => {
+    mask.style.display = 'block'; 
+    loader.style.display = 'none'
+    errorPage.style.display = 'block'; 
+    errorPage.style.position = 'fixed'; 
+    errorPage.style.zIndex = '999999999999'; 
+    errorPage.style.top = '50%'; 
+    errorPage.style.left = '50%'; 
+    errorPage.style.transform = 'translate(-50%, -50%)'; 
+  });
+});
+
+
+
+
+
+
+
+
