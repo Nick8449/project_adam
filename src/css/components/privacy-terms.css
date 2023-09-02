@@ -126,7 +126,6 @@
 
 .info-modal-text-list {
   display: flex;
-  justify-content: row;
   flex-wrap: wrap;
 }
 
