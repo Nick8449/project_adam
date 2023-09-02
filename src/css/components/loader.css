@@ -1,0 +1,42 @@
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white); 
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-duration-time-function);
+}
+.loader {
+    display: flex;
+    width: 55px;
+    height: 55px;
+    border: 10px solid var(--green);
+    border-radius: 50%;
+    border-left-color: var(--hover-focus-color);
+    animation: loader 1.3s linear infinite;
+}
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .loader {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .loader {
+        width: 95px;
+        height: 95px;
+    }
+}
+

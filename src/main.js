@@ -88,49 +88,146 @@ window.addEventListener('resize', handleScreenWidthChange);
 // ****************************************************************************//
 
 
-
-
 //-------------------------------- Privycy Policy ------------------------------//
 
-const infoBtn = document.querySelector('.info-open-btn-id');
-const applicationBtn = document.querySelector('.application-open-btn-id');
-const infoCloseBtn = document.querySelector('.info-close-btn-id');
-const infoBackdrop = document.querySelector('.info-backdrop-id');
+document.addEventListener('DOMContentLoaded', function () {
+  const infoBtns = document.querySelectorAll('.info-open-btn-id');
+  const infoBackdrop = document.querySelector('.info-backdrop-id');
+  const closeBtn = document.querySelector('.info-close-btn-id');
+  const infoModal = document.querySelector('.info-modal');
 
-infoBtn.addEventListener('click', () => {
+  const heroContainer = document.querySelector('.hero'); 
+
+  let scrollPosition = 0;
+
+  infoBtns.forEach(infoBtn => {
+    infoBtn.addEventListener('click', () => {
+      scrollPosition = window.scrollY;
+      scrollToTop();
+      openInfoModal();
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    closeInfoModal();
+    scrollToPosition();
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function openInfoModal() {
+    infoBackdrop.style.opacity = '1';
     infoBackdrop.classList.remove('is-hidden');
-});
 
-applicationBtn.addEventListener('click', () => {
-    infoBackdrop.classList.remove('is-hidden');
-});
+    const heroPosition = heroContainer.getBoundingClientRect();
+    infoModal.style.top = `${heroPosition.top}px`;
+  }
 
-infoCloseBtn.addEventListener('click', () => {
-    closeInfoBackdrop();
-});
+  function closeInfoModal() {
+    infoBackdrop.style.opacity = '0';
+    infoBackdrop.classList.add('is-hidden');
+  }
 
-function closeInfoBackdrop() {
-  infoBackdrop.classList.add('is-hidden');
-}
+  function scrollToPosition() {
+    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+  }
+});
 
 // ****************************************************************************//
+
 
 //-------------------------------- Terms of Service ------------------------------//
 
-const termsBtn = document.querySelector('.terms-open-btn');
-const termsCloseBtn = document.querySelector('.terms-close-btn');
-const termsBackdrop = document.querySelector('.terms-backdrop');
+document.addEventListener('DOMContentLoaded', function () {
+  const termsBtn = document.querySelector('.terms-open-btn-id');
+  const termsCloseBtn = document.querySelector('.terms-close-btn-id');
+  const termsBackdrop = document.querySelector('.terms-backdrop-id');
+  const termsModal = document.querySelector('.terms-modal');
 
-termsBtn.addEventListener('click', () => {
+  const termsHeroContainer = document.querySelector('hero'); 
+
+  let scrollPosition = 0;
+
+  termsBtn.addEventListener('click', () => {
+      scrollPosition = window.scrollY;
+      scrollToTop();
+      openTermsModal();
+    });
+
+  termsCloseBtn.addEventListener('click', () => {
+    closeTermsModal();
+    scrollToPosition();
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function openTermsModal() {
+    termsBackdrop.style.opacity = '1';
     termsBackdrop.classList.remove('is-hidden');
-});
+    if (termsHeroContainer) {
+      const termsHeroPosition = termsHeroContainer.getBoundingClientRect();
+      termsModal.style.top = `${termsHeroPosition.top}px`;
+    }
+  }
 
-termsCloseBtn.addEventListener('click', () => {
-    closetTermsBackdrop();
-});
+  function closeTermsModal() {
+    termsBackdrop.style.opacity = '0';
+    termsBackdrop.classList.add('is-hidden');
+  }
 
-function closetTermsBackdrop() {
-  termsBackdrop.classList.add('is-hidden');
-}
+  function scrollToPosition() {
+    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+  }
+});
 
 // ****************************************************************************//
+
+
+//-------------------------------- Loader ------------------------------//
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mask = document.querySelector('.mask');
+  const loader = document.querySelector('.loader');
+  const errorPage = document.querySelector('.page-error-container');
+
+  if (navigator.onLine) {
+    mask.style.display = 'none'; 
+    errorPage.style.display = 'none'; 
+  } else {
+    mask.style.display = 'none'; 
+    errorPage.style.display = 'block'; 
+    errorPage.style.position = 'fixed'; 
+    errorPage.style.zIndex = '9999999'; 
+    errorPage.style.top = '50%'; 
+    errorPage.style.left = '50%'; 
+    errorPage.style.transform = 'translate(-50%, -50%)'; 
+  }
+
+  window.addEventListener('online', () => {
+    mask.style.display = 'none'; 
+    errorPage.style.display = 'none'; 
+  });
+
+  window.addEventListener('offline', () => {
+    mask.style.display = 'block'; 
+    loader.style.display = 'none'
+    errorPage.style.display = 'block'; 
+    errorPage.style.position = 'fixed'; 
+    errorPage.style.zIndex = '999999999999'; 
+    errorPage.style.top = '50%'; 
+    errorPage.style.left = '50%'; 
+    errorPage.style.transform = 'translate(-50%, -50%)'; 
+  });
+});
+
+
+
+
+
+
+
+
