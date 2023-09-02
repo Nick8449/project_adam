@@ -204,6 +204,12 @@
     }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1280px) {
+    .backdrop {
+      transition: none;  
+    }
+  }
+
 @media screen and (min-width: 1280px) {
     
     .backdrop{
