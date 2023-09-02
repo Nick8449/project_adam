@@ -1,4 +1,4 @@
- //-------------------------------- HEADER ------------------------------//
+//-------------------------------- HEADER ------------------------------//
 
 const burgerButton = document.getElementById('burger-button');
 const closeButton = document.getElementById('close-button');
@@ -7,52 +7,47 @@ const navList = document.querySelector('.site-nav__list');
 const backdrop = document.querySelector('.backdrop');
 const sideMenu = document.getElementById('side-menu');
 
-
 burgerButton.addEventListener('click', () => {
-    backdrop.classList.remove('is-hidden');
-    sideMenu.classList.remove('is-hidden');
+  backdrop.classList.remove('is-hidden');
+  sideMenu.classList.remove('is-hidden');
 });
 
 closeButton.addEventListener('click', () => {
+  backdrop.classList.add('is-hidden');
+  sideMenu.classList.add('is-hidden');
+});
+
+backdrop.addEventListener('click', event => {
+  if (event.target === event.currentTarget) {
     backdrop.classList.add('is-hidden');
     sideMenu.classList.add('is-hidden');
-
+  }
 });
 
-backdrop.addEventListener('click', (event) => {
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-    if(event.target === event.currentTarget){
-        backdrop.classList.add('is-hidden');
-        sideMenu.classList.add('is-hidden');
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+      });
     }
-
+  });
 });
-
-  document.querySelectorAll('.smooth-scroll').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
 
 function handleScreenWidthChange() {
   const screenWidth = window.innerWidth;
 
-  if(screenWidth < 1280 ){
+  if (screenWidth < 1280) {
     burgerButton.classList.remove('is-hidden');
     closeButton.classList.remove('is-hidden');
     backdrop.classList.add('is-hidden');
     sideMenu.classList.add('is-hidden');
   }
 
-  if(screenWidth >= 1280 ){
+  if (screenWidth >= 1280) {
     burgerButton.classList.add('is-hidden');
     closeButton.classList.add('is-hidden');
     sideMenu.classList.remove('is-hidden');
@@ -60,13 +55,12 @@ function handleScreenWidthChange() {
   }
 
   siteNavLinks.forEach(siteNavLink => {
-
     siteNavLink.removeEventListener('click', addIsHidden);
 
     if (screenWidth < 1280) {
       siteNavLink.addEventListener('click', addIsHidden);
     }
-    if (screenWidth >= 1280){
+    if (screenWidth >= 1280) {
       siteNavLink.addEventListener('click', removeIsHidden);
     }
   });
@@ -84,9 +78,7 @@ handleScreenWidthChange();
 
 window.addEventListener('resize', handleScreenWidthChange);
 
-
 // ****************************************************************************//
-
 
 //-------------------------------- Privycy Policy ------------------------------//
 
@@ -96,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeBtn = document.querySelector('.info-close-btn-id');
   const infoModal = document.querySelector('.info-modal');
 
-  const heroContainer = document.querySelector('.hero'); 
+  const heroContainer = document.querySelector('.hero');
 
   let scrollPosition = 0;
 
@@ -121,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
     infoBackdrop.style.opacity = '1';
     infoBackdrop.classList.remove('is-hidden');
 
-    const heroPosition = heroContainer.getBoundingClientRect();
-    infoModal.style.top = `${heroPosition.top}px`;
+    // const heroPosition = heroContainer.getBoundingClientRect();
+    // infoModal.style.top = `${heroPosition.top}px`;
   }
 
   function closeInfoModal() {
@@ -137,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ****************************************************************************//
 
-
 //-------------------------------- Terms of Service ------------------------------//
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -146,15 +137,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const termsBackdrop = document.querySelector('.terms-backdrop-id');
   const termsModal = document.querySelector('.terms-modal');
 
-  const termsHeroContainer = document.querySelector('hero'); 
+  const termsHeroContainer = document.querySelector('hero');
 
   let scrollPosition = 0;
 
   termsBtn.addEventListener('click', () => {
-      scrollPosition = window.scrollY;
-      scrollToTop();
-      openTermsModal();
-    });
+    scrollPosition = window.scrollY;
+    scrollToTop();
+    openTermsModal();
+  });
 
   termsCloseBtn.addEventListener('click', () => {
     closeTermsModal();
@@ -186,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ****************************************************************************//
 
-
 //-------------------------------- Loader ------------------------------//
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -195,39 +185,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const errorPage = document.querySelector('.page-error-container');
 
   if (navigator.onLine) {
-    mask.style.display = 'none'; 
-    errorPage.style.display = 'none'; 
+    mask.style.display = 'none';
+    errorPage.style.display = 'none';
   } else {
-    mask.style.display = 'none'; 
-    errorPage.style.display = 'block'; 
-    errorPage.style.position = 'fixed'; 
-    errorPage.style.zIndex = '9999999'; 
-    errorPage.style.top = '50%'; 
-    errorPage.style.left = '50%'; 
-    errorPage.style.transform = 'translate(-50%, -50%)'; 
+    mask.style.display = 'none';
+    errorPage.style.display = 'block';
+    errorPage.style.position = 'fixed';
+    errorPage.style.zIndex = '9999999';
+    errorPage.style.top = '50%';
+    errorPage.style.left = '50%';
+    errorPage.style.transform = 'translate(-50%, -50%)';
   }
 
   window.addEventListener('online', () => {
-    mask.style.display = 'none'; 
-    errorPage.style.display = 'none'; 
+    mask.style.display = 'none';
+    errorPage.style.display = 'none';
   });
 
   window.addEventListener('offline', () => {
-    mask.style.display = 'block'; 
-    loader.style.display = 'none'
-    errorPage.style.display = 'block'; 
-    errorPage.style.position = 'fixed'; 
-    errorPage.style.zIndex = '999999999999'; 
-    errorPage.style.top = '50%'; 
-    errorPage.style.left = '50%'; 
-    errorPage.style.transform = 'translate(-50%, -50%)'; 
+    mask.style.display = 'block';
+    loader.style.display = 'none';
+    errorPage.style.display = 'block';
+    errorPage.style.position = 'fixed';
+    errorPage.style.zIndex = '999999999999';
+    errorPage.style.top = '50%';
+    errorPage.style.left = '50%';
+    errorPage.style.transform = 'translate(-50%, -50%)';
   });
 });
-
-
-
-
-
-
-
-
