@@ -56,7 +56,6 @@ function handleScreenWidthChange() {
     burgerButton.classList.add('is-hidden');
     closeButton.classList.add('is-hidden');
     sideMenu.classList.remove('is-hidden');
-    sideMenu.classList.remove('is-hidden');
     backdrop.classList.remove('is-hidden');
   }
 
